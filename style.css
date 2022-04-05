@@ -1,0 +1,596 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&family=Julius+Sans+One&family=Open+Sans:wght@300;400;600&display=swap');
+
+
+:root{
+    --yellow: #ff9a00;
+    --red: #ff3900;
+    --black: #000;
+    --white: #fff;
+    --background: #0a0a0a;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background-color: var(--background);
+}
+
+
+
+header{
+    width: 100vw;
+    height: 50vh;
+    background: linear-gradient(
+          rgba(0, 0, 0, 0.1), 
+          rgba(0, 0, 0, 0.6)),
+          url(img/background1.jpg);
+          background-position: right;
+          background-repeat: no-repeat;
+          background-size: cover;
+          overflow: hidden;
+}
+
+.nav__wrapper{
+    width: 100vw;
+    /* height: 8vh; */
+    background-color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .7rem 1rem;
+}
+
+.nav__menu{
+    display: none;
+}
+.nav__logo{
+    font-size: .5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: var(--yellow);
+    font-family: 'Comfortaa';
+    text-transform: uppercase;
+}
+
+.nav__icons{
+    font-size: .7rem;
+}
+
+.fa{
+    padding: .3rem;
+    color: var(--white);
+}
+
+.fa:nth-child(even){
+    color: var(--yellow);
+}
+
+.header__logo--icon{
+    width: min(7vw, 5rem);
+}
+
+.header__logo{
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: 'Julius Sans One', sans-serif;
+    /* padding: 5vw; */
+    margin: 0 10vw;
+}
+
+.header__logo--primary{
+    text-align: center;
+    letter-spacing: 3px;
+    font-family: 'Julius Sans One', sans-serif;
+    padding-right: 2vw;
+}
+
+.header__logo--text1 h2{
+    font-size: clamp(1.7rem, 6vw, 6rem);
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+.header__logo--text2 p{
+    font-size: clamp(.9rem, 4.5vw, 3rem);
+}
+
+.header__logo--text3{
+    font-size: clamp(.5rem, 3vw, 1.5rem);
+}
+
+.header__logo--secondary{
+    font-size: .5rem;
+    margin-top: 3vh;
+}
+
+.header__info--address,
+.header__info--text
+{
+    font-size: clamp(.5rem, 2vw, 1.3rem);
+    letter-spacing: 1px;
+}
+
+.header__logo--text1,
+.header__logo--text3,
+.header__info--text{
+    color: var(--white);
+}
+
+.header__logo--text3 span,
+.header__logo .fa,
+.header__logo--text2,
+.header__info--address{
+    color: var(--yellow);
+    text-align: center;
+}
+
+@media (min-width: 320px){
+    .header__logo{
+        margin-top: 3vh;
+    }
+}
+@media (min-width: 400px){
+    .header__logo{
+        margin-top: 4vh;
+        margin-right: 13vw;
+    }
+}
+
+/* @media (min-height: 700px){
+    .header__logo{
+        margin: 5vh 12vw 0 0;
+    }
+    .header__logo--text1 h2{
+        font-size: clamp(1rem, 4.5vh, 6rem);
+    }
+    
+    .header__logo--text2 p{
+        font-size: clamp(.5rem, 3vh, 3rem);
+    }
+    
+    .header__logo--text3{
+        font-size: clamp(.2rem, 2vh, 1.5rem);
+    }
+    
+    .header__logo--secondary{
+        font-size: .5rem;
+        margin-top: 3vh;
+    }
+    
+    .header__info--address,
+    .header__info--text
+    {
+        font-size: clamp(.5rem, 1.3vh, 1.3rem);
+    }
+} */
+
+@media (min-width: 320px) and (min-height: 615px) {
+    .header__logo{
+        margin-top: 3vh;
+    }
+}
+
+/* ----- food section ----- */
+
+main{
+    background-color: var(--background);
+    width: 85vw;
+    margin: 0 auto;
+}
+
+.main__foodSection{
+    margin-top: 2rem;
+}
+
+.main__foodSection--all{
+    margin-bottom: 3rem;
+    border-top: 1px solid var(--yellow);
+}
+
+.main__foodSection--all:first-child{
+    border-top: none;
+}
+
+.title {
+    font-size: clamp(2.3rem, 4vw, 2rem);
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--yellow);
+    font-family: 'Comfortaa';
+    /* position: relative; */
+}
+
+.text{
+    font-size: clamp(.8rem, 1vw, 1rem);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.6;
+    color: var(--white);
+    letter-spacing: .5px;
+    padding: 0 2rem;
+}
+
+
+.main__foodSection--title{
+    padding: 2rem;
+}
+
+@media (min-width: 900px){
+    .main__foodSection{
+        display: flex;
+    }
+    .main__foodSection--all:first-child{
+        border-top: 1px solid var(--yellow);
+    }
+}
+
+
+/* ---------- about section ------------  */
+
+.main__aboutSection--img {
+    max-width: 30rem;
+    position: relative;
+    /* margin-top: 30%; */
+    margin: 0 auto;
+}
+
+.main__aboutSectiob--img1{
+    width: 100%;
+}
+
+.main__aboutSection--img2{
+    position: absolute;
+    top: 60%;
+    width: 70%;
+    left: -7%;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-radius: 40%;
+}
+
+.main__aboutSection--texts{
+    margin-top: 50%;
+}
+
+.main__aboutSection .fa{
+    color: var(--red);
+    padding-right: .5rem;
+}
+
+.main__aboutSection--text{
+    padding: 1rem;
+}
+
+.main__aboutSection--title{
+    font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+.button{
+        font-size: .6rem;
+        font-size: clamp(.6rem, 2vh, 1.9rem);
+        text-transform: uppercase;
+        color: var(--yellow);
+        border: 1px solid var(--yellow);
+        padding: 1em 1.8em;
+        margin-top: 2%;
+        letter-spacing: 1px;
+        font-family: 'Comfortaa';
+}
+
+.main__aboutSection--buttonPlace{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 500px){
+    .main__aboutSection--texts{
+        margin-top: 23vw;
+    }
+}
+
+@media (min-width: 1020px){
+    .main__aboutSection{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10vh;
+    }
+
+    .main__aboutSection--texts{
+        margin-top: 0vw;
+        max-width: 40rem;
+    }
+
+}
+
+
+/* ---------------- menu ---------------- */
+
+.main__menu{
+    max-width: 70vw;
+    margin: 0 auto;
+}
+
+
+.main__menu--firstTitle{
+    margin: 2em 0 1em;
+}
+
+/* .main__aboutSection--texts .title::before,
+.main__aboutSection--texts .title::after,
+.main__menu--text .title::before,
+.main__menu--text .title::after{
+    height: 0;
+} */
+
+.main__menu--title{
+    font-size: 1.2rem;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    padding: 1rem 0;
+}
+.main__menu--price{
+    color: var(--yellow);
+    font-family: 'Comfortaa';
+    font-size: .8rem;
+}
+
+
+.main__menu li{
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.main__menu li:last-child{
+    border-bottom: none;
+}
+
+.main__menu--description{
+    padding: .7rem 0;
+}
+
+.footer__logo img{
+    width: 20px;
+}
+
+.footer__elements{
+    text-align: center;
+    width: 90vw;
+    margin: 0 auto 2rem;
+}
+
+.footer__info{
+    display: flex;
+    color: #fff;
+    font-size: .5rem;
+    font-family: 'Comfortaa';
+    justify-content: space-around;
+    padding-top: 1rem;
+    padding: 1rem;
+}
+
+.footer__elements .fa{
+    font-size: .5rem;
+}
+
+footer{
+    margin-top: 3rem;
+}
+
+
+
+.footer__elements .fa{
+    font-size: clamp(1rem, 3vh, 2rem);
+}
+.footer__logo img{
+    min-width: 50px;
+    max-width: 1000px;
+
+}
+
+.footer__elements{
+    text-align: center;
+    width: 90vw;
+    margin: 0 auto 2rem;
+}
+
+.footer__info{
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--white);
+    font-size: .5rem;
+    font-size: clamp(.5rem, 3vh, 2rem);
+    font-family: 'Comfortaa';
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+footer .header__info p{
+    font-size: clamp(1rem, 1vh, 3rem);
+}
+
+footer .header__info{
+    padding: 1rem 0;
+}
+
+
+@media (min-width: 740px){
+    .nav__menu{
+        display:inline;
+    }
+
+    .nav__menu--hamburger{
+        display: none;
+    }
+    .nav__menu{
+        justify-content: space-between;
+        padding: 30px;
+    }
+    .nav__menu li{
+        display: inline-block;
+        font-size: .8rem;
+        font-size: clamp(.8rem, 1.5vw, 1.1rem);
+        font-family: 'Comfortaa';
+        padding: 0px .4em;
+        word-spacing: 5px;
+    }
+    
+    .nav__menu li a{
+        text-transform: uppercase;
+        font-weight: 300;
+        color: #fff;
+        padding-bottom: 10px;
+        transition: .5s ease;
+    }
+    
+    .nav__menu li:last-child{
+        border: none;
+    }
+    
+    .nav__icons{
+        font-size: .9rem;
+    }
+    .nav__logo{
+        font-size: .7rem;
+    }
+}
+
+
+@media (min-width: 840px){
+
+    .main__menu{
+        /* display: flex;
+        justify-content: center;
+        align-items: left; */
+        /* width: 90vw; */
+        text-align:left;
+        margin: 0 auto;
+    }
+
+    .main__menu--price{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--white);
+    }
+
+    .main__menu--description
+    .main__menu--title{
+        text-align: left;
+    }
+
+    .main__menu--text .title,
+    .main__menu--text .text{
+        text-align: left;
+    }
+        
+    .main__menu li{
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        border-bottom: 1px solid var(--white);
+    }
+
+    .main__aboutSection--img {
+        max-width: 25rem;
+    }
+
+    .main__foodSection{
+        margin: 8rem auto;
+    }
+
+    .main__aboutSection--text{
+        max-width: 70vh;
+        margin: 0 auto;
+    }
+
+    
+}
+
+
+@media (min-width: 1024px){
+    .nav__menu ul li a:hover{
+        color: var(--yellow);
+        border-bottom: 1px solid var(--yellow);
+    }
+    
+    .nav__menu ul li a{
+        transition: 0.3s;
+    }
+    
+    .button{
+        transition: 0.3s;
+    }
+    
+    .button:hover{
+        color: var(--red);
+        border: 1px solid var(--red);
+    }
+    header{
+        height: 100vh;
+    }
+
+    .header__logo--primary{
+        margin-top: 3vw ;
+    }
+
+    .header__logo--secondary{
+        margin-top: 5vw ;
+    }
+
+    .header__logo--text p{
+        letter-spacing: 10px;
+    }
+
+    .header__logo--secondary p{
+        letter-spacing: 2px;
+        line-height: 1.8;
+    }
+
+   .main__menu{
+       max-width: 60vw;
+   }
+
+   .main__menu--description{
+       font-size: .9rem;
+   }
+
+   .main__aboutSection--img {
+    max-width: 30rem;
+}
+
+.main__menu--firstTitle{
+    margin-top: 10rem;
+}
+
+.nav__icons .fa{
+    font-size: 1.3rem;
+    padding: 0 .4em;
+}
+.nav__wrapper{
+    padding: 0 5em;
+}
+
+}
+
+@media (min-width: 1240px){
+    .nav__menu li{
+        padding: 0 1rem;
+    }
+}
+
+
